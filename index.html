@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Textuales y Signos de Puntuacion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            display: flex; /* Habilita Flexbox para colocar los divs lado a lado */
+            gap: 20px; /* Espacio entre las columnas */
+            flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+            margin-bottom: 30px; /* Espacio antes del tercer div */
+        }
+        .column {
+            flex: 1; /* Permite que las columnas crezcan y se encojan */
+            min-width: 45%; /* Ancho mínimo para cada columna, ajusta si es necesario */
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        thead tr {
+            background-color: #009879; /* Color para la primera tabla */
+            color: #ffffff;
+        }
+        .column:nth-child(2) thead tr { /* Color específico para la segunda tabla */
+            background-color: #007bff;
+        }
+        tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        .column:nth-child(2) tbody tr:last-of-type {
+            border-bottom: 2px solid #007bff;
+        }
+        tbody tr:hover {
+            background-color: #e6f7f5; /* Hover para la primera tabla */
+        }
+        .column:nth-child(2) tbody tr:hover {
+            background-color: #e6f0ff; /* Hover para la segunda tabla */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        h2 {
+            text-align: center;
+            color: #009879;
+            margin-bottom: 20px;
+        }
+        .column:nth-child(2) h2 {
+            color: #007bff;
+        }
+
+        /* Estilos para el tercer div de fragmentos */
+        .fragment-section {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Espacio encima de este div */
+        }
+        .fragment-section h2 {
+            color: #dc3545; /* Un color distintivo para esta sección */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .fragment-item {
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .fragment-item:last-child {
+            border-bottom: none; /* No hay línea en el último fragmento */
+            margin-bottom: 0;
+        }
+
+        /* Media queries para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+            }
+            .column {
+                min-width: 90%; /* Ocupa casi todo el ancho disponible */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Elementos Textuales y Signos de Puntuacion</h1>
+
+    <div class="container">
+        <div class="column">
+            <h2>Tabla de Relacionantes, Conectores y Marcadores Textuales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Funcion Textual</th>
+                        <th>Relacionantes, Conectores o Marcadores Textuales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Adicion/Ampliacion</td>
+                        <td>Y, ademas, encima, de igual forma, por a&ntilde;adidura, tambien, sumado a esto, asimismo, ademas de esto, al mismo tiempo, paralelamente, de la misma manera, mas aun, incluso, es mas, analogamente, igualmente, de igual modo...</td>
+                    </tr>
+                    <tr>
+                        <td>Correccion</td>
+                        <td>Bueno, o sea, mejor dicho, rectificando</td>
+                    </tr>
+                    <tr>
+                        <td>Cierre discursivo/Conclusion</td>
+                        <td>En fin, por fin, por ultimo, en resumen, en sintesis, para concluir, para terminar, sinteticamente, en forma sumaria, en definitiva, para concretar, en suma, al fin y al cabo, a fin de cuentas</td>
+                    </tr>
+                    <tr>
+                        <td>Digresion</td>
+                        <td>Por cierto, a proposito, por otra parte...</td>
+                    </tr>
+                    <tr>
+                        <td>Ejemplificacion e inclusion</td>
+                        <td>Por ejemplo, pongo por caso, como, tal como, verbigracia, tal es el caso de, para ejemplificar, en otras palabras, es como, es decir, en particular, dicho de otra manera, valga como ejemplo, concretamente, sin ir mas lejos, lo que quiere decir...</td>
+                    </tr>
+                    <tr>
+                        <td>Enfasis</td>
+                        <td>Pues si que, claro que, sobre todo, lo que es mas importante, es preciso se&ntilde;alar, repetimos, subrayamos, conviene poner enfasis, cabe destacar, cabe resaltar, en otras palabras, maxime...</td>
+                    </tr>
+                    <tr>
+                        <td>Explicacion o matizacion</td>
+                        <td>Es decir, esto es, a saber...</td>
+                    </tr>
+                    <tr>
+                        <td>Restriccion</td>
+                        <td>Si acaso, hasta cierto punto...</td>
+                    </tr>
+                    <tr>
+                        <td>Condicion</td>
+                        <td>Si... entonces... , si (tal cosa) tal (otra), siempre que, siempre y cuando, a condicion de que, en caso de que...</td>
+                    </tr>
+                    <tr>
+                        <td>Manera o modo</td>
+                        <td>Como, de modo similar, del mismo modo, de igual manera, de diferente modo, de esta manera, similarmente, inversamente...</td>
+                    </tr>
+                    <tr>
+                        <td>Causativos</td>
+                        <td>Porque, entonces, por esta razon, consecuentemente, en consecuencia, puesto que, debido a, por ello, por esta causa, por lo antedicho, de lo antedicho se desprende que, lo que antecede permite deducir, de ahi que, por lo tanto, en efecto, pues, por eso, por lo cual, por ende, en tal caso, en ese caso, de hecho, pues bien...</td>
+                    </tr>
+                    <tr>
+                        <td>Finalidad</td>
+                        <td>Para, en orden a, con el proposito de, con el fin de, con el objeto de, a fin de, a estos efectos, en procura de, para eso...</td>
+                    </tr>
+                    <tr>
+                        <td>Oposicion o contraste / Concesion</td>
+                        <td>No obstante, sin embargo, en oposicion a, con todo, aun, aunque, aun cuando, contrariamente a, pero, si bien, en contraste con, empero, a pesar de, pese a, en cambio, inversamente, al contrario, aun asi, de todos modos, despues de todo, en cualquier caso, en todo caso, sea como fuere, pero...</td>
+                    </tr>
+                    <tr>
+                        <td>Tiempo</td>
+                        <td>Antes, despues, mientras, anteriormente, mas tarde, actualmente, previamente, posteriormente, un momento despues, mucho tiempo antes, hasta que, cuando, finalmente, ya, en el momento en que, a partir de...</td>
+                    </tr>
+                    <tr>
+                        <td>Espacio</td>
+                        <td>Aqui, alla, aca, en ese lugar, donde, alli, al lado, debajo, arriba, a la izquierda, en el medio, en el fondo...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="column">
+            <h2>SIGNOS DE PUNTUACION Y OTROS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Signos</th>
+                        <th>Funcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Punto</td>
+                        <td>Pausa mayor. Si se cambia de tema: punto aparte. Si continua el tema: punto seguido.</td>
+                    </tr>
+                    <tr>
+                        <td>La coma</td>
+                        <td>Pausa breve. Separa: elementos de una enumeracion, frases explicativas. Indica la omision del verbo, etc.</td>
+                    </tr>
+                    <tr>
+                        <td>El punto y coma</td>
+                        <td>Pausa intermedia. Separa oraciones largas unidas por conjunciones u oraciones yuxtapuestas.</td>
+                    </tr>
+                    <tr>
+                        <td>Los dos puntos</td>
+                        <td>Se usan para desarrollar el contenido de una oracion, para indicar una cita textual, para el encabezamiento de las cartas, etc.</td>
+                    </tr>
+                    <tr>
+                        <td>Los puntos suspensivos</td>
+                        <td>Se&ntilde;alan expresiones inconclusas u omitidas voluntariamente.</td>
+                    </tr>
+                    <tr>
+                        <td>Los parentesis</td>
+                        <td>Encierran datos complementarios o introducen aclaraciones sin conexion sintactica con el texto en el cual aparecen.</td>
+                    </tr>
+                    <tr>
+                        <td>Los corchetes</td>
+                        <td>Indican lo que falta en un texto o lo que se conjetura que deberia decir el texto.</td>
+                    </tr>
+                    <tr>
+                        <td>Las comillas</td>
+                        <td>Encierran citas textuales y palabras o expresiones que quieren destacarse dentro de un texto.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
